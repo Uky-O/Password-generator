@@ -27,17 +27,9 @@ def generate_password(min_length, numbers=True, special_characters=True):
             has_special = True
 
         meets_criteria = True
-        meets_critera = True
 
         if numbers:
-            meets_critera = has_number
+            meets_criteria = has_number
         if special_characters:
-            meets_criteria = meets_critera and has_special
+            meets_criteria = meets_criteria and has_special
     return pwd
-
-min_lenght = int(input('Enter the minimum lenght:'))
-p_number = input('Do you want to have a number (y/n)?'
-                 'option:').lower()
-
-password = generate_password(10, special_characters=False)
-print(password)
